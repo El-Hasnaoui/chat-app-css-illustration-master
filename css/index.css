@@ -222,7 +222,9 @@ border-radius: 30px;
     border-radius: 20px 0 0 20px;
 }
 #button{
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40px;
     height: 40px;
     padding: 7px;
