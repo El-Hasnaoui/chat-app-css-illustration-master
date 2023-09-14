@@ -1,0 +1,364 @@
+*{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url(../font/Rubik-VariableFont_wght.ttf);
+}
+body{
+    font-family: Rubik;
+    font-size: 16px;
+    background-color: hsl(270, 20%, 96%);
+    margin: 0;
+    padding: 0;
+}
+main{
+    display: flex;
+    align-items: center;
+}
+#first-section{
+   margin-left: auto;
+   margin-top: 10%;
+   animation: mouve-mobile 1s ease 1;
+}
+#mobile{
+    position: relative;
+    font-size: 8px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    background-color: white;
+    margin-left: 100px;
+
+}
+#bg2{
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    width: 23vw;
+    height: 43vw;
+    border-radius:  23vw 0 0 0;
+    background-color: hsla(276, 88%, 74%, 0.08);
+}
+#bg1{
+    position: absolute;
+    top:0px;
+    left: -10%;
+    width: 38vw;
+    height: 45vw;
+    border-radius: 0 0 50% 50%;
+    background: linear-gradient(to bottom ,hsl(293, 100%, 63%) 40%,hsl(264, 100%, 61%));
+    min-width: 270px;
+    min-height: 600px;
+}
+#second-section{
+   animation: mouve-text 2s ease 1;
+    min-width: 400px;
+    max-width: 400px;
+    margin-left: 100px;
+    margin-right: 20%;
+}
+@keyframes mouve-mobile {
+    0%{
+        margin-top: 0px;
+    }
+    100%{
+        margin-top: 10%;
+    }
+}
+@media(max-width:800px){
+    main{
+        flex-direction: column;
+    }
+    #first-section{
+        margin-top: 100px;        
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 30px;
+    }
+    #second-section{
+         max-width: 400px;
+         min-width: 0;
+         margin-left: 10px;
+         margin-right: 10px;
+         text-align: center;
+         margin-bottom: 80px;
+    }
+    #mobile{
+        margin-left: 0;
+    }
+    #bg2{
+        background-color: hsla(0, 0%, 100%, 0);
+    }
+    #bg1{
+        min-height: unset;
+        max-height: unset;
+        height: 400px;
+    }
+    @keyframes mouve-mobile {
+        0%{
+            margin-top: 0px;
+        }
+        100%{
+            margin-top: 100px;
+        }
+    }
+}
+
+
+
+#white-space{
+    height: 30px;
+    width: 150px;
+    background-color: white;
+    position: absolute;
+    border-radius: 0 0 20px 20px;
+    top:0px;
+    right:50px;
+}
+#mobile >div{
+margin: 10px;
+padding: 0;
+background-color: hsl(270, 20%, 96%);
+border-radius: 30px;
+}
+#mobile-header{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-top: 30px;
+    background: linear-gradient(to right ,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+    border-radius: 20px 20px 5px 5px;
+    margin-bottom: 10px;
+}
+#arrow{
+    width:6px;
+    margin-right: 10px;
+}
+#avatar{
+    width:25px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+#points{
+    width:5px;
+    margin-left: auto;
+}
+.recieved-msg{
+    width: fit-content;
+    padding: 10px;
+    margin-bottom: 8px;
+    margin-left: 10px;
+    background-color:  hsla(276, 100%, 81%, 0.114);
+    border-radius: 10px 10px 10px 0;
+    color: hsl(276, 55%, 52%);
+}
+#dog-imgs{
+    width: 130px;
+    display: flex;
+    margin-left: auto;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+#dog-imgs img {
+    animation: textanimation3 1s 2s ease 1 backwards;
+    width: 30px;
+    margin: 0 5px;
+    border-radius: 8px;
+}
+.sent-msg{
+    width: fit-content;
+    padding: 10px;
+    margin-bottom: 8px;
+    margin-right: 10px;
+    margin-left: auto;
+    background-color:  white;
+    border-radius: 10px 10px 0 10px ;
+    color: black;
+}
+.offer{
+    width: 70%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right ,hsl(293, 100%, 63%) 40%,hsl(264, 100%, 61%));
+    margin-left: 10px;
+    margin-bottom: 8px;
+    border-radius: 10px  10px  10px 4px;
+}
+.offer span:first-of-type{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: white solid 1px;
+    margin-right: 10px;
+}
+.offer span{
+    display: block;
+}
+.offer span:nth-child(2){
+    color: rgba(255, 255, 255, 0.7);
+    animation: textanimation6 1s 2s ease 1 backwards;
+}
+.offer span:nth-child(3){
+    margin-left: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    animation: textanimation5 1s 2s ease 1 backwards;
+}
+#text-input{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+#text{
+    display: block;
+    border: white;
+    height: 40px;
+    border-radius: 20px 0 0 20px;
+}
+#button{
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 7px;
+    background-color: white;
+    border-radius: 0 20px 20px 0;
+}
+#text:focus{
+    outline: none;
+}
+
+
+
+#state{
+    color: hsl(276, 100%, 81%);
+}
+#name{
+    color: white;
+    font-size: 12px;
+}
+h1{
+    color: hsl(271, 36%, 24%);
+}
+p{
+    color: hsl(270, 7%, 64%);
+}
+#mobile .recieved-msg:nth-child(2){
+    animation: textanimation1 1s ease 1 both;
+}
+#mobile .recieved-msg:nth-child(3){
+    animation: textanimation1 1s 1s ease 1 both;
+}
+#dog-imgs img {
+    animation: textanimation3 1s 2s ease 1 both;
+}
+#mobile .sent-msg:nth-child(5){
+    animation: textanimation2 1s 3s ease 1 both;
+}
+#mobile .sent-msg:nth-child(6){
+    animation: textanimation2 1s 4s ease 1 both;
+}
+#mobile .recieved-msg:nth-child(7){
+    animation: textanimation1 1s 5s ease 1 both;
+}
+#mobile .offer:nth-child(8){
+    animation: textanimation4 1s 6s ease 1 both;
+}
+#mobile .offer:nth-child(9){
+    animation: textanimation4 1s 7s ease 1 both;
+}
+#mobile .offer:nth-child(8) .circle{
+    animation: textanimation7 1s 6s ease 1 both;
+}
+#mobile .offer:nth-child(9) .circle{
+    animation: textanimation7 1s 7s ease 1 both;
+}
+#mobile .offer:nth-child(8) span:nth-child(2){
+ animation: textanimation6 1s 6s ease 1 both;
+}
+#mobile .offer:nth-child(9) span:nth-child(2){
+    animation: textanimation6 1s 7s ease 1 both;
+   }
+#mobile .offer:nth-child(8) span:nth-child(3){
+    animation: textanimation5 1s 6s ease 1 both;
+}
+#mobile .offer:nth-child(9) span:nth-child(3){
+       animation: textanimation5 1s 7s ease 1 both;
+}
+
+@keyframes mouve-text {
+    0%{
+        margin-top: 400px;
+    }
+    100%{
+        margin-top: unset;
+    }
+}
+@keyframes textanimation1 {
+    0%{
+        background-color: hsl(270, 20%, 96%);
+        color: hsl(270, 20%, 96%);
+    }
+    100%{
+        background-color:  hsla(276, 100%, 81%, 0.114);
+        color: hsl(276, 55%, 52%);
+    }
+}
+@keyframes textanimation2 {
+    0%{
+        background-color: hsl(270, 20%, 96%);
+        color: hsl(270, 20%, 96%);
+    }
+    100%{
+        background-color:  white;
+        color: hsl(0, 0%, 0%);
+    }
+}
+@keyframes textanimation3{
+   0%{
+    width: 0px;
+   }
+   100%{
+    width: 30px;
+   }
+}
+@keyframes textanimation4{
+    0%{
+        background: hsl(270, 20%, 96%);
+        color: hsl(270, 20%, 96%);
+    }
+    100%{
+     background: linear-gradient(to right ,hsl(293, 100%, 63%) 40%,hsl(264, 100%, 61%));
+     color: white;
+    }
+}
+@keyframes textanimation5{
+    0%{
+        color: hsl(270, 20%, 96%);
+    }
+    100%{
+     color: white;
+    }
+}
+
+@keyframes textanimation6{
+    0%{
+        color: hsl(270, 20%, 96%);
+    }
+    100%{
+    color: rgba(255, 255, 255, 0.7);;
+    }
+}
+@keyframes textanimation7{
+    0%{
+        border-color:  hsl(270, 20%, 96%);
+    }
+    100%{
+    border-color: white;
+    }
+}
